@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import pages.RegForm;
 
 
-public class RegFormTests {
+public class RegFormTests extends TestBase{
 
     RegForm regForm = new RegForm();
 
@@ -24,13 +24,6 @@ public class RegFormTests {
             userState = "Uttar Pradesh",
             userCity = "Agra",
             userBdayDay = "30";
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.browser = "firefox";
-    }
 
     @Test
     void successFillPracticeForm() {
