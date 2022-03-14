@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
 
+import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -20,7 +21,7 @@ public class RegFormTests extends TestBase {
             userBdayYear = "1999",
             userSubject = "History",
             userHobby = "Reading",
-            userPictureName = "cat_4_qaguru_11.jpeg",
+           // userPictureName = "cat_4_qaguru_11.jpeg",
             userCurrAddress = "Main street,90210",
             userState = "Uttar Pradesh",
             userCity = "Agra",
@@ -28,7 +29,7 @@ public class RegFormTests extends TestBase {
 
     @Test
     void successFillPracticeForm() {
-        regForm.openPage()
+            regForm.openPage()
                 .setFirstName(userName)
                 .setLastName(userSurnname)
                 .setEmail(userEmail)

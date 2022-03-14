@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
 
 public class RegForm {
     //components
@@ -33,11 +34,13 @@ public class RegForm {
 
     //actions
     public RegForm openPage() {
-        open("/automation-practice-form");
+        step("Открываем тестирумую страницу", () -> {
+            open("/automation-practice-form");
         mainHeader.shouldHave(text("Practice Form"));
         titleOfForm.shouldHave(text("Student Registration Form"));
         submitBTN.shouldHave(text("Submit"));
         return this;
+        });
     }
 
     public RegForm setFirstName(String firstName) {
