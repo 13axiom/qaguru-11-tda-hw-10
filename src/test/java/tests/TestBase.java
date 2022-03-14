@@ -14,25 +14,25 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+      //  SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.browser = "firefox";
+       // Configuration.browser = "firefox";
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+      /*  DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;*/
     }
 
-        @AfterEach
+        /*@AfterEach
         void addAttachments() {
             Attach.screenshotAs("Last screenshot");
             Attach.pageSource();
             Attach.browserConsoleLogs();
             Attach.addVideo();
             closeWebDriver();
-        }
+        }*/
 
 }
