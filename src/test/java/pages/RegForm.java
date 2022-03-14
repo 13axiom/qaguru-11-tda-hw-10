@@ -37,7 +37,6 @@ public class RegForm {
     @Step("Открываем тестируемую страницу")
     public RegForm openPage() {
         open("/automation-practice-form");
-        @Step("Выполняем проверку открытой страницы (заголовки, кнопки")
         mainHeader.shouldHave(text("Practice Form"));
         titleOfForm.shouldHave(text("Student Registration Form"));
         submitBTN.shouldHave(text("Submit"));
