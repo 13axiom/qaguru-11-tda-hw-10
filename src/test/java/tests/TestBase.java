@@ -14,7 +14,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-      //  SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        //  SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
