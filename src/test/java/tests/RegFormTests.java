@@ -37,7 +37,7 @@ public class RegFormTests extends TestBase {
                 .setBirthDate(userBdayDay, userBdayMonth, userBdayYear)
                 .setSubject(userSubject)
                 .selectHobby()
-                .uploadPicture(userPictureName)
+                //.uploadPicture(userPictureName)
                 .setAddress(userCurrAddress)
                 .selectState(userState)
                 .selectCity(userCity)
@@ -52,7 +52,7 @@ public class RegFormTests extends TestBase {
                 .checkResult("Date of Birth", userBdayDay + " " + userBdayMonth + "," + userBdayYear)
                 .checkResult("Subjects", userSubject)
                 .checkResult("Hobbies", userHobby)
-                .checkResult("Picture", userPictureName)
+                //.checkResult("Picture", userPictureName)
                 .checkResult("Address", userCurrAddress)
                 .checkResult("State and City", userState + " " + userCity);
     }
