@@ -26,13 +26,14 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
-        /*@AfterEach
-        void addAttachments() {
-            Attach.screenshotAs("Last screenshot");
-            Attach.pageSource();
-            Attach.browserConsoleLogs();
-            Attach.addVideo();
-            closeWebDriver();
-        }*/
+    @AfterEach
+    void addAttachments() {
+        Attach.attachAsText("try", "some_message");
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+        closeWebDriver();
+    }
 
 }
