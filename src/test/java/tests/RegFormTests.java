@@ -1,6 +1,11 @@
 package tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
 
@@ -28,6 +33,10 @@ public class RegFormTests extends TestBase {
             userBdayDay = "30";
 
     @Test
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Подключаем Jenkins с Allure report")
+    @DisplayName("Результат заполнения формы соответствует введенным значениям в форме")
     void successFillPracticeForm() {
             regForm.openPage()
                 .setFirstName(userName)

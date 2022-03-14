@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
@@ -33,67 +34,78 @@ public class RegForm {
             resultTable = $(".table-responsive");
 
     //actions
+    @Step("Открываем тестируемую страницу")
     public RegForm openPage() {
-        step("Открываем тестирумую страницу", () -> {
-            open("/automation-practice-form");
+        open("/automation-practice-form");
+        @Step("Выполняем проверку открытой страницы (заголовки, кнопки")
         mainHeader.shouldHave(text("Practice Form"));
         titleOfForm.shouldHave(text("Student Registration Form"));
         submitBTN.shouldHave(text("Submit"));
         return this;
-        });
     }
 
+    @Step("Проставляем имя студента")
     public RegForm setFirstName(String firstName) {
         firstNameInput.setValue(firstName);
         return this;
     }
 
+    @Step("Проставляем фамилию студента")
     public RegForm setLastName(String lastName) {
         lastNameInput.setValue(lastName);
         return this;
     }
 
+    @Step("Проставляем email студента")
     public RegForm setEmail(String email) {
         emailInput.setValue(email);
         return this;
     }
 
+    @Step("Проставляем пол студента")
     public RegForm selectMaleGender() {
         genderMale.click();
         return this;
     }
 
+    @Step("Проставляем телефон студента")
     public RegForm setPhone(String phone) {
         phoneNumberInput.setValue(phone);
         return this;
     }
 
+    @Step("Проставляем дату рождения студента")
     public RegForm setBirthDate(String day, String month, String year) {
         bdayField.click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
 
+    @Step("Проставляем изучаемый предмет студентом")
     public RegForm setSubject(String subject) {
         subjectInput.setValue(subject).pressEnter();
         return this;
     }
 
+    @Step("Проставляем увлечение студента")
     public RegForm selectHobby() {
         hobbyReading.click();
         return this;
     }
 
+    @Step("Загружаем пикчу студента")
     public RegForm uploadPicture(String picture) {
         uploadPictureField.uploadFromClasspath("./img/" + picture);
         return this;
     }
 
+    @Step("Проставляем адрес студента")
     public RegForm setAddress(String address) {
         addressInput.setValue(address);
         return this;
     }
 
+    @Step("Проставляем штат студента")
     public RegForm selectState(String state) {
         stateSelection.scrollIntoView(true);
         stateSelection.click();
@@ -101,22 +113,27 @@ public class RegForm {
         return this;
     }
 
+    @Step("Проставляем город студента")
     public RegForm selectCity(String city) {
         citySelection.click();
         $(byText(city)).click();
         return this;
     }
 
+    @Step("Кликаем по кнопке \"Submit\"")
     public RegForm clickSubmitBTN() {
         submitBTN.click();
         return this;
     }
 
+    @Step("Проверяем заголовок результата созданной формы")
     public RegForm checkResultHeader() {
         resultHeader.shouldHave(text("Thanks for submitting the form"));
         return this;
     }
 
+    @Step("Проверяем проставленные значения для поля {fieldName}." +
+            "Значение должно быть: {value}")
     public RegForm checkResult(String fieldName, String value) {
         resultTable.$(byText(fieldName))
                 .parent().shouldHave(text(value));
