@@ -1,8 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
 
@@ -59,4 +56,8 @@ public class RegFormTests extends TestBase {
                 .checkResult("State and City", userState + " " + userCity);
     }
 
-}
+    @Test
+    void test05() {
+        assertTrue(true);
+    }
+    }
