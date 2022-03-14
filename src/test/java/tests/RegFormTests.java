@@ -4,13 +4,9 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
-
-import static io.qameta.allure.Allure.step;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class RegFormTests extends TestBase {

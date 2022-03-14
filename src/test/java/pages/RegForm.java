@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 public class RegForm {
     //components
@@ -131,7 +130,7 @@ public class RegForm {
         return this;
     }
 
-    @Step("Проверяем проставленные значения для поля {fieldName}." +
+    @Step("Проверяем проставленные значения для поля {fieldName}. \n" +
             "Значение должно быть: {value}")
     public RegForm checkResult(String fieldName, String value) {
         resultTable.$(byText(fieldName))
