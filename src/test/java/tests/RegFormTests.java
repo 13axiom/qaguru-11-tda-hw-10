@@ -22,7 +22,7 @@ public class RegFormTests extends TestBase {
             userHobby = "Reading",
             userPictureName = "cat_4_qaguru_11.jpeg",
             userCurrAddress = "Main street,90210",
-            userState = "Uttar Pradesh",
+            userState = "NCR",
             userCity = "Agra",
             userBdayDay = "30";
 
