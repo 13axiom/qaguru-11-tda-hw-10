@@ -27,7 +27,6 @@ public class RegFormTests extends TestBase {
             userBdayDay = "30";
 
     @Test
-    @Disabled
     void successFillPracticeForm() {
         regForm.openPage()
                 .setFirstName(userName)
@@ -56,10 +55,5 @@ public class RegFormTests extends TestBase {
                 .checkResult("Picture", userPictureName)
                 .checkResult("Address", userCurrAddress)
                 .checkResult("State and City", userState + " " + userCity);
-    }
-
-    @Test
-    void test05() {
-        assertTrue(true);
     }
     }
