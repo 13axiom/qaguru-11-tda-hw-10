@@ -22,8 +22,8 @@ public class RegFormTests extends TestBase {
             userHobby = "Reading",
             userPictureName = "cat_4_qaguru_11.jpeg",
             userCurrAddress = "Main street,90210",
-            userState = "NCR",
-            userCity = "Delhi",
+            userState = "Uttar Pradesh",
+            userCity = "Agra",
             userBdayDay = "30";
 
     @Test
