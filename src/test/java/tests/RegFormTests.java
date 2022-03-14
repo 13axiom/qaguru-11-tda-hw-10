@@ -56,4 +56,4 @@ public class RegFormTests extends TestBase {
                 .checkResult("Address", userCurrAddress)
                 .checkResult("State and City", userState + " " + userCity);
     }
-    }
+}
