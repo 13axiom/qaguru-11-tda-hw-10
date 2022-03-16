@@ -17,17 +17,15 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        String remoteBrowserUser = System.getProperty("remote_browser_user",BrowserPropertiesS.remoteBrowserUserS);
-        String remoteBrowserPassword = System.getProperty("remote_browser_password",BrowserPropertiesS.remoteBrowserPassS);
+        String remoteBrowserUser = System.getProperty("remote_browser_user");
+        String remoteBrowserPassword = System.getProperty("remote_browser_password");
 
         step("Настраиваем тестируемую страницу", () -> {
             Configuration.baseUrl = "https://demoqa.com";
             Configuration.browser = System.getProperty("browser", "chrome");
             Configuration.browserSize = System.getProperty("browser_size", "3840x2160");
-           // String remoteBrowserAddress = System.getProperty("remote_browser", "selenoid.autotests.cloud/wd/hub");
 
             Configuration.remote = "https://" + remoteBrowserUser + ":" + remoteBrowserPassword + "@" + System.getProperty("remote_browser");
-            System.out.println("u/p " + Configuration.remote);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
