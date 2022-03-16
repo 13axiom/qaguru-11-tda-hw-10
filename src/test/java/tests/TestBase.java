@@ -17,8 +17,8 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        String remoteBrowserUser = System.getProperty("remote_browser_user");
-        String remoteBrowserPassword = System.getProperty("remote_browser_password");
+        String remoteBrowserUser = System.getProperty("remote_browser_user",BrowserPropertiesS.remoteBrowserUserS);
+        String remoteBrowserPassword = System.getProperty("remote_browser_password",BrowserPropertiesS.remoteBrowserPassS);
 
         step("Настраиваем тестируемую страницу", () -> {
             Configuration.baseUrl = "https://demoqa.com";
