@@ -23,11 +23,11 @@ public class TestBase {
             Configuration.browser = System.getProperty("browser", "chrome");
             Configuration.browserSize = System.getProperty("browser_size", "3840x2160");
             String remoteBrowserAddress = System.getProperty("remote_browser", "selenoid.autotests.cloud/wd/hub");
-            String remoteBrowserUser1 = System.getProperty("remote_browser_user");
-            String remoteBrowserPassword = System.getProperty("remote_browser_password");
+            String remoteBrowserUser1 = System.getProperty("remote_browser_user", BrowserPropertiesS.remoteBrowserUser);
+            String remoteBrowserPassword1 = System.getProperty("remote_browser_password", BrowserPropertiesS.remoteBrowserPass);
 
-            Configuration.remote = "https://" + remoteBrowserUser1 + ":" + remoteBrowserPassword + "@" + remoteBrowserAddress;
-            System.out.println("u/p " + remoteBrowserUser1 +"," +remoteBrowserPassword);
+            Configuration.remote = "https://" + remoteBrowserUser1 + ":" + remoteBrowserPassword1 + "@" + remoteBrowserAddress;
+            System.out.println("u/p " + remoteBrowserUser1 +"," +remoteBrowserPassword1);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
