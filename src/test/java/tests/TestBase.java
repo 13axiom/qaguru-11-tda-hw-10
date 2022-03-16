@@ -27,7 +27,7 @@ public class TestBase {
             String remoteBrowserPassword = System.getProperty("remote_browser_password", BrowserPropertiesS.remoteBrowserPass);
 
             Configuration.remote = "https://" + remoteBrowserUser + ":" + remoteBrowserPassword + "@" + remoteBrowserAddress;
-            System.out.println(remoteBrowserUser+","remoteBrowserPassword);
+            System.out.println(remoteBrowserUser + "," + remoteBrowserPassword);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
