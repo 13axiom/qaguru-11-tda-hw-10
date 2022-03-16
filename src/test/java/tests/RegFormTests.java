@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -13,8 +14,8 @@ public class RegFormTests extends TestBase {
 
     RegForm regForm = new RegForm();
 
-    String userName = "Vovan",
-            userSurnname = "deMort'",
+    String userName = System.getProperty("User_First_Name","Vovan"),
+            userSurnname = System.getProperty("User_Last_Name","deMort'"),
             userEmail = "vmort@mailinator.com",
             userGender = "Male",
             userPhone = "9005553311",
@@ -27,6 +28,7 @@ public class RegFormTests extends TestBase {
             userState = "Uttar Pradesh",
             userCity = "Agra",
             userBdayDay = "30";
+
 
     @Test
     @Owner("DmitriyTQC")
@@ -48,6 +50,7 @@ public class RegFormTests extends TestBase {
                 .selectState(userState)
                 .selectCity(userCity)
                 .clickSubmitBTN();
+
 
         regForm.checkResultHeader()
                 .checkResult("Label", "Values")
