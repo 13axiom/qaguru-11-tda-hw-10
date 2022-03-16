@@ -1,29 +1,21 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
-
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
 
 
 public class RegFormTests extends TestBase {
 
     RegForm regForm = new RegForm();
 
-    String userName = System.getProperty("User_First_Name","Vovan"),
-            userSurnname = System.getProperty("User_Last_Name","deMort'"),
+    String userName = System.getProperty("User_First_Name", "Vovan"),
+            userSurnname = System.getProperty("User_Last_Name", "deMort'"),
             userEmail = "vmort@mailinator.com",
             userGender = "Male",
             userPhone = "9005553311",
@@ -36,7 +28,6 @@ public class RegFormTests extends TestBase {
             userState = "Uttar Pradesh",
             userCity = "Agra",
             userBdayDay = "30";
-
 
 
     @Test
@@ -90,7 +81,6 @@ public class RegFormTests extends TestBase {
                 .clickSubmitBTN();
 
         String dateNow = regForm.dateNow();
-
 
         regForm.checkResultHeader()
                 .checkResult("Label", "Values")

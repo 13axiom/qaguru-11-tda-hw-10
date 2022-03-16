@@ -143,6 +143,7 @@ public class RegForm {
                 .parent().shouldHave(text(value));
         return this;
     }
+
     @Step("Проверяем проставленные значения для поля {fieldName}. \n" +
             "Значение должно быть: пустым")
     public RegForm checkEmptyResult(String fieldName) {

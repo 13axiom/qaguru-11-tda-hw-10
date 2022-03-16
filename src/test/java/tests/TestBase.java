@@ -20,10 +20,10 @@ public class TestBase {
 
         step("Настраиваем тестируемую страницу", () -> {
             Configuration.baseUrl = "https://demoqa.com";
-            Configuration.browser = System.getProperty("browser","chrome");
-            Configuration.browserSize = System.getProperty("browser_size","3840x2160");
-            String remoteBrowserAddress = System.getProperty("remote_browser","selenoid.autotests.cloud/wd/hub");
-            Configuration.remote = "https://"+ BrowserPropertiesS.remoteBrowserUser +":"+BrowserPropertiesS.remoteBrowserPass + "@" + remoteBrowserAddress;
+            Configuration.browser = System.getProperty("browser", "chrome");
+            Configuration.browserSize = System.getProperty("browser_size", "3840x2160");
+            String remoteBrowserAddress = System.getProperty("remote_browser", "selenoid.autotests.cloud/wd/hub");
+            Configuration.remote = "https://" + BrowserPropertiesS.remoteBrowserUser + ":" + BrowserPropertiesS.remoteBrowserPass + "@" + remoteBrowserAddress;
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
@@ -36,11 +36,11 @@ public class TestBase {
     void addAttachments() {
         step("Прикрепляем атачи результата теста", () -> {
 //        Attach.attachAsText("Add message to end of th test", "some_message");
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-        closeWebDriver();
+            Attach.screenshotAs("Last screenshot");
+            Attach.pageSource();
+            Attach.browserConsoleLogs();
+            Attach.addVideo();
+            closeWebDriver();
         });
     }
 }
