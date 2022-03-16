@@ -1,9 +1,15 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import pages.components.CalendarComponent;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -136,5 +142,20 @@ public class RegForm {
         resultTable.$(byText(fieldName))
                 .parent().shouldHave(text(value));
         return this;
+    }
+    @Step("Проверяем проставленные значения для поля {fieldName}. \n" +
+            "Значение должно быть: пустым")
+    public RegForm checkEmptyResult(String fieldName) {
+        resultTable.$(byText(fieldName))
+                .parent().shouldBe(empty);
+        return this;
+    }
+
+    @Description("Вычисляем текущую дату для теста")
+    public String dateNow() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM,yyyy", Locale.ENGLISH);
+        LocalDateTime now = LocalDateTime.now();
+        String date = (dtf.format(now));
+        return date;
     }
 }

@@ -7,6 +7,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegForm;
 
@@ -75,6 +76,7 @@ public class RegFormTests extends TestBase {
     }
 
     @Test
+    @Tag("smoke")
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Тесты формы")
