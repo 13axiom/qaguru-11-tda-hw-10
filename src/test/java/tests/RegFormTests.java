@@ -102,10 +102,4 @@ public class RegFormTests extends TestBase {
                 .checkEmptyResult("Address")
                 .checkEmptyResult("State and City");
     }
-
-    @Test
-    @Disabled
-    void tttest() {
-        regForm.dateNow();
-    }
 }
