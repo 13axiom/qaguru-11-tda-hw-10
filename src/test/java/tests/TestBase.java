@@ -24,7 +24,7 @@ public class TestBase {
             Configuration.browserSize = System.getProperty("browser_size", "3840x2160");
 
 
-            Configuration.remote = "https://" +   System.getProperty("remote_browser_user",BrowserPropertiesS.remoteBrowserUser) + ":" + System.getProperty("remote_browser_password",BrowserPropertiesS.remoteBrowserPass) + "@" + System.getProperty("remote_browser", "selenoid.autotests.cloud/wd/hub");
+            Configuration.remote = "https://" +   System.getProperty("remote_browser_user") + ":" + System.getProperty("remote_browser_password") + "@" + System.getProperty("remote_browser");
             System.out.println("u/p " +   Configuration.remote);
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
