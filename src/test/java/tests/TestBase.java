@@ -20,7 +20,7 @@ public class TestBase {
         step("Настраиваем тестируемую страницу", () -> {
             Configuration.baseUrl = "https://demoqa.com";
             Configuration.browser = System.getProperty("browser","chrome");
-            Configuration.browserSize = System.getProperty("size","3840x2160");
+            Configuration.browserSize = System.getProperty("browser_size","3840x2160");
             Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
