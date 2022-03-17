@@ -11,7 +11,7 @@ branch -> "hw11"
 Job -> https://jenkins.autotests.cloud/job/c11-lifetesting-unit11-hw/  
   
 Урок 12 отправка уведомлений о прогоне тестов в телеграм:  
-branch -> "hw12-notification-telegram-bot"  
+branch -> "hw12-notifications-tg-bot-without-token"  
 Job -> https://jenkins.autotests.cloud/job/c11-lifetesting-unit12-hw/  
 
 
