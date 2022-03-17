@@ -1,6 +1,6 @@
 # qaguru-11-tda-hw-10
 
-Welcome to the qaguru-11-tda-hw-10!  
+#### Welcome to the qaguru-11-tda-hw-10!  
   
 Урок 10 Первая сборка в Jenkins:  
 master  
@@ -16,7 +16,7 @@ Job -> https://jenkins.autotests.cloud/job/c11-lifetesting-unit12-hw/
 
 
 ---
-Параметры сборок для уроков 11 и 12
+#### Параметры сборок для уроков 11 и 12
 
 BRANCH - ветка для запуска тестов, назначение ветки выше в описании
 
