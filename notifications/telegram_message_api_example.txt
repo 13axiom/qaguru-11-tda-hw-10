@@ -1,7 +1,6 @@
 BOT TOKEN: $TGTOKEN
 CHAT ID: $QALICHATID
 
-
 // Command in many lines (\ as separator)
 curl -X POST \
      -H 'Content-Type: application/json' \
