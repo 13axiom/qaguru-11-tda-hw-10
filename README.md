@@ -45,5 +45,6 @@ Last_Name - Фамилия студента, которая заполнится
 
 ---
 Пример результата отправки уведомление по прогону jenkis job для урока 12
-<img width="1131" alt="Снимок экрана 2022-03-17 в 10 11 00" src="https://user-images.githubusercontent.com/84909251/158759391-3fdb2736-f0d9-41af-a7e3-6050d861f858.png">
+<img width="1123" alt="Снимок экрана 2022-03-17 в 10 11 00" src="https://user-images.githubusercontent.com/84909251/158759801-7cff2572-f8a3-4417-b7ff-cc7fa97f8eef.png">
+
 
