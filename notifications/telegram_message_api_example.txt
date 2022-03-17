@@ -1,11 +1,11 @@
-BOT TOKEN: 5070299881:AAHNzh_hGgjsHRJvxqY07gZSQtQomeZE7p4
-CHAT ID: -1001603048603
+BOT TOKEN: $TGTOKEN
+CHAT ID: $QALICHATID
 
 // Command in many lines (\ as separator)
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "-1001603048603", "text": "This is a test from qa.guru"}' \
-     https://api.telegram.org/bot5070299881:AAHNzh_hGgjsHRJvxqY07gZSQtQomeZE7p4/sendMessage
+     -d '{"chat_id": "$QALICHATID", "text": "This is a test from qa.guru"}' \
+     https://api.telegram.org/bot$TGTOKEN/sendMessage
 
 // Command in one line
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001603048603", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot5070299881:AAHNzh_hGgjsHRJvxqY07gZSQtQomeZE7p4/sendMessage
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "$QALICHATID", "text": "This is a test from qa.guru"}' https://api.telegram.org/bot$TGTOKEN/sendMessage

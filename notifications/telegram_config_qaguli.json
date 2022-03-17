@@ -1,8 +1,8 @@
 {
   "app": {
     "bot": {
-      "token": "5070299881:AAHNzh_hGgjsHRJvxqY07gZSQtQomeZE7p4",
-      "chat": "-1001603048603",
+      "token": "$TGTOKEN",
+      "chat": "$QALICHATID",
       "replyTo": ""
     },
     "base": {
