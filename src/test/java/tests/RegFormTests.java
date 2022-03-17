@@ -31,6 +31,7 @@ public class RegFormTests extends TestBase {
 
 
     @Test
+    @Tag("success_test")
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Подключаем Jenkins с Allure report")
@@ -68,6 +69,7 @@ public class RegFormTests extends TestBase {
 
     @Test
     @Tag("smoke")
+    @Tag("success_test")
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Тесты формы")
