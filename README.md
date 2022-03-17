@@ -10,7 +10,7 @@ Job -> c11-lifetesting-unit10-hw-jenkins-demoqa
 branch -> "hw11"  
 Job -> https://jenkins.autotests.cloud/job/c11-lifetesting-unit11-hw/  
   
-Урок 12 отправка уведомлений:  
+Урок 12 отправка уведомлений о прогоне тестов в телеграм:  
 branch -> "hw12-notification-telegram-bot"  
 Job -> https://jenkins.autotests.cloud/job/c11-lifetesting-unit12-hw/  
 
@@ -42,3 +42,7 @@ BROWSER_SIZE - разрешение браузера
 First_Name - Имя студента, которая заполнится в карточке студента тесте
 
 Last_Name - Фамилия студента, которая заполнится в карточке студента тесте
+
+---
+Пример результата отправки уведомление по прогону jenkis job для урока 12
+<img width="1123" alt="Снимок экрана 2022-03-17 в 10 11 00" src="https://user-images.githubusercontent.com/84909251/158759801-7cff2572-f8a3-4417-b7ff-cc7fa97f8eef.png">
